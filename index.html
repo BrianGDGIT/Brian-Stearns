@@ -1,149 +1,182 @@
 <!DOCTYPE html>
+<html>
 
-</!--Add bootstrap-->
+<head>
+	</!--Add bootstrap-->
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<style>
-#well0 {
-  background-color: black;
-}
-#well1 {
-  background-color: black;
-}
+	<style>
 
-#well2 {
-  background-color: white;
-}
+	.profile-image {
 
-.profile-image {
+	  border-style: solid;
+	  border-radius: 50%;
+	  margin: auto;
+	}
 
-  border-style: solid;
-  border-radius: 50%;
-  margin: auto;
-}
+	.project-image {
+		border: 5px solid black;
+	}
+	
+	.contact-icons{
+		border-radius: 12px;
+	}
 
-.project-image {
-	border: 5px solid black;
-}
+	h1 {
+		color: black;
+		text-align: center;
+		font-size: 75px;
+	}
+	
+	h2 {
+		text-align: center;
+	}
+	
+	h3 { 
+		color: black;
+		font-size: 50px;
+	}
+	
+	h4 {
+		color: black;
+		font-size: 45px;
+	}
 
-h1 {
-	color: black;
-	text-align: center;
-	font-size: 75px;
-}
-h2 {
-	color: black;
-	text-align: center;
-}
+/* FlexBox row container */
+	.row{
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-h3 {
-	color: black;
-	text-align: center;
-	font-size: 75px;
-}
-
-h4 {
-	color: black;
-	text-align: center;
-	font-size: 75px;
-}
-
-#Pwell3 {
-  background-color: black;
-}
-
-#Pwell4 {
-  background-color: white;
-}
-
-#Cwell5{
-	background-color: black;
-}
-
-#Cwell6{
-	background-color: white;
-}
-
-</style>
-
-
-<div class="well well-lg" id="well0">
-  <div class="row">
-    <div class="col-sm-2">
-      <a href="#About"><button class="btn btn-block btn-primary">About</button></a>
-    </div>
-    <div class="col-sm-2">
-      <a href="#Portfolio"><button class="btn btn-block btn-primary">Portfolio</button></a>
-    </div>
-    <div class="col-sm-2">
-      <a href="#Contact"><button class="btn btn-block btn-primary">Contact</button></a>
-    </div>
-  </div>
-</div>
-
-<div id="About">
-  <h1>Brian Stearns</h1>
-</div>
-
-<div class="well well-lg" id="well1">
-  <div class="well well-md" id="well2">
-    <img class="img-responsive profile-image" src="https://avatars0.githubusercontent.com/u/8205537" alt="Profile Picture">
-    <h2>Programmer - Web Developer - Software Developer</h2>
-  </div>
-</div>
-
-<div id="Portfolio">
-  <h3>Portfolio</h3>
-</div>
-
-<div class="well well-lg" id="Pwell3">
-  <div class"well well-lg" id="Pwell4">
-    <div class="row">
-      
-      <div class="col-xs-4">
-		<a href="https://briangdgit.github.io/FCC-FE-Tribute-Page/">
-			<img class="img-responsive project-image" src="images/Port1.jpg" alt="Project1">
-		</a>
-      </div>
-      
-      <div class="col-xs-4">
-		<a href="https://briangdgit.github.io/StartPage/">
-			<img class="img-responsive project-image" src="images/Port2.jpg" alt="Project2">
-		</a>
-      </div>
-      
-      <div class="col-xs-4">
-		<a href="https://briangdgit.github.io/Brian-Stearns/">
-			<img class="img-responsive project-image" src="images/Port3.jpg" alt="Project3">  
-		</a>
-      </div>
-        
-    </div>
-  </div>
-</div>
+/* FlexBox side container */
+	.side{
+		flex: 30%;
+	}
+	
+	.navbar{
+		display: flex;
+		background-color: black;
+		margin: 0;
+	}
+	
+	.navbar a {
+		padding: 20px 50px;
+	}
+		
+	#Portfolio{
+		flex: 70%;
+		padding: 20px;
+		background-color: #d6d6c2;
+	}
+	
+	.portfolio-grid-container{
+		display: grid;
+		grid-template-columns: 500px 500px;
+		grid-column-gap: 200px;
+	}
+	
+	.websites-grid{
+		display: grid
+		grid-template-columns: 500px;
+	}
+	
+	.java-grid{
+		display: grid;
+		grid-template-columns: 500px;
+		height: 300px;
+	}
 
 
-<div id="Contact">
-  <h4>Contact Me</h4>
-</div>
+	#footer-container {
+		display: grid;
+		grid-template-columns: 500px 500px;
+		background-color: grey;
+		justify-content: space-evenly;
+	}
 
-<div class="well well-lg" id="Cwell5">
-	<div class"well well-lg" id="Cwell6">
-		<div class="row">
-			<div class="col-xs-4">
-				<a href="mailto:brian.stearnscs@gmail.com"><img class="img-responsive" src="https://briangdgit.github.io/Brian-Stearns/images/gmail.jpg" alt="Gmail"</a>
+	.contact-grid{
+		display: grid;
+		grid-template-columns: 50px 50px 50px;
+		grid-column-gap: 10px;
+		grid-column: 2 / 2;
+	}
+	
+/*Buttons*/
+	.button{
+		background-color: #2C8DD3;
+		color: white;
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+		font-size: 24px;
+		border-radius: 4px;
+		border: 2px #2C8DD3;
+		width: 200px;
+	}
+	
+	.button:hover{
+		background-color: #003cb3;
+		color: white;
+	}
+
+
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="navbar">
+		  <div class="row">
+			  <a href="#About"><button class="button">About</button></a>
+			  <a href="#Portfolio"><button class="button">Portfolio</button></a>
+			  <a href="#footer-container"><button class="button">Contact</button></a>
 			</div>
-			
-			<div class="col-xs-4">
-				<a href="https://www.linkedin.com/in/brian-stearns-28b018101"><img class="img-responsive" src="https://briangdgit.github.io/Brian-Stearns/images/linkedimage.jpg" alt="Linked In"</a>
-			</div> 
+		  </div>
+	</header>
 
-			<div class="col-xs-4">
-				<a href="https://github.com/BrianGDGIT"><img class="img-responsive" src="https://briangdgit.github.io/Brian-Stearns/images/githubimage.jpg" alt="Github"</a>
+	<main>
+		<div class="row">
+			<div class="side" id="About">
+					<h1>Brian Stearns</h1>
+					<img class="img-responsive profile-image" src="https://avatars0.githubusercontent.com/u/8205537" alt="Profile Picture">
+					<h2>Programmer - Web Developer - Software Developer</h2>
+			</div>
+
+
+			<div id="Portfolio">
+				<h1>Projects</h1>
+				<div class="portfolio-grid-container">
+					<div class="websites-grid">
+						<h3>Websites</h3>
+						<a href="https://briangdgit.github.io/FCC-FE-Tribute-Page/"><img class="img-responsive project-image" src="images/Port1.jpg" alt="Project1"></a>
+						<p>Static website about the legend John Carmack</p>
+
+						<a href="https://briangdgit.github.io/StartPage/"><img class="img-responsive project-image" src="images/Port2.jpg" alt="Project2"></a>
+						
+					</div>
+					
+					<div class="java-grid">
+						<h3>Android Apps</h3>
+						<a href="https://briangdgit.github.io/Brian-Stearns/"><img class="img-responsive project-image" src="images/Port3.jpg" alt="Project3"></a>
+					</div>
+					
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
+	</main>
+
+	<footer>
+		<div id="footer-container">
+			<h4>About</h4>
+			<h4>Contact Me</h4>
+				<div class="contact-grid">
+					<a href="mailto:brian.stearnscs@gmail.com"><img class="img-responsive contact-icons" src="https://briangdgit.github.io/Brian-Stearns/images/gmail.jpg" alt="Gmail"</a>
+					<a href="https://www.linkedin.com/in/brian-stearns-28b018101"><img class="img-responsive contact-icons" src="https://briangdgit.github.io/Brian-Stearns/images/linkedimage.jpg" alt="Linked In"</a>
+					<a href="https://github.com/BrianGDGIT"><img class="img-responsive contact-icons" src="https://briangdgit.github.io/Brian-Stearns/images/githubimage.jpg" alt="Github"</a>
+				</div>
+		</div>
+	</footer>
+</body>
     
  
