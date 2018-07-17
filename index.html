@@ -43,6 +43,8 @@
 		color: black;
 		font-size: 45px;
 	}
+	
+
 
 /* FlexBox row container */
 	.row{
@@ -52,7 +54,7 @@
 	
 	.column{
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		flex-direction: column;
 	}
 
@@ -84,8 +86,8 @@
 	
 	.portfolio-grid-container{
 		display: grid;
-		grid-template-columns: 500px 800px 500px;
-		grid-column-gap: 300px;
+		grid-template-columns: 240px 800px 500px;
+		grid-column-gap: 100px;
 	}
 	
 	.websites-grid{
@@ -142,6 +144,7 @@
 </head>
 
 <body>
+	<div class="column">
 	<header>
 		<div class="navbar">
 		  <div class="row">
@@ -153,7 +156,7 @@
 	</header>
 
 	<main>
-		<div class="column">
+		
 			<div class="side" id="About">
 					<h1>Brian Stearns</h1>
 					<img class="img-responsive profile-image" src="https://avatars0.githubusercontent.com/u/8205537" alt="Profile Picture">
@@ -191,7 +194,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 	</main>
 
 	<footer>
@@ -204,6 +206,7 @@
 			</div>
 		</div>
 	</footer>
+</div>
 </body>
     
  
