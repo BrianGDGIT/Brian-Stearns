@@ -46,27 +46,27 @@
 	
 
 
-/* FlexBox row container */
+/* FlexBox */
+	.wrapper{
+		display: flex;
+		align-items: stretch;
+		flex-direction: column;
+	}
+	
+	.main-wrapper{
+		display: flex;
+		flex-grow: 1;
+	}
+	
 	.row{
 		display: flex;
 		flex-wrap: wrap;
 	}
 	
-	.column{
-		display: flex;
-		flex-wrap: nowrap;
-		flex-direction: column;
-	}
-
-/* FlexBox side container */
-	.side{
-		flex: 30%;
-	}
-	
 	.navbar{
-		display: flex;
 		background-color: black;
 		margin: 0;
+		flex-shrink: 0;
 	}
 	
 	.navbar a {
@@ -143,21 +143,17 @@
 	</style>
 </head>
 
-<body>
-	<div class="column">
-	<header>
-		<div class="navbar">
+<body class="wrapper">
+	<header class="navbar">
 		  <div class="row">
 			  <a href="#About"><button class="button">About</button></a>
 			  <a href="#Portfolio"><button class="button">Portfolio</button></a>
 			  <a href="#footer-container"><button class="button">Contact</button></a>
 			</div>
-		  </div>
 	</header>
 
-	<main>
-		
-			<div class="side" id="About">
+	<main class="main-wrapper>
+			<div id="About">
 					<h1>Brian Stearns</h1>
 					<img class="img-responsive profile-image" src="https://avatars0.githubusercontent.com/u/8205537" alt="Profile Picture">
 					<h2>Programmer - Web Developer - Software Developer</h2>
@@ -206,7 +202,6 @@
 			</div>
 		</div>
 	</footer>
-</div>
 </body>
     
  
